@@ -1,0 +1,47 @@
+<!-- app/templates/admin/dashboard.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <h2>Login Analytics</h2>
+    <table id="login-analytics">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Login Time</th>
+                <th>IP Address</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be filled dynamically -->
+        </tbody>
+    </table>
+
+    <h2>Suspicious Activity Logs</h2>
+    <table id="activity-logs">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Event Type</th>
+                <th>Description</th>
+                <th>Time</th>
+                <th>Risk Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be filled dynamically -->
+        </tbody>
+    </table>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
